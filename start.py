@@ -101,7 +101,7 @@ class GameController(object):
         self.score += points
         self.textgroup.updateScore(self.score)
 
-#leveling not working yet
+    #leveling not working yet
     def nextLevel(self):
         self.showEntities() 
         self.level += 1
@@ -199,12 +199,14 @@ class GameController(object):
             y = SCREENHEIGHT - self.lifesprites.images[i].get_height()
             self.screen.blit(self.lifesprites.images[i], (x, y))
         pygame.display.update()
-    
+
+pygame.display.set_caption('Lady Pacman')    
 if __name__ == "__main__":
     game = GameController()
     game.startGame()
     while True:
         game.update()
+
     
 
     
